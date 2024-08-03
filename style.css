@@ -36,7 +36,7 @@ h3,
 h4,
 h5,
 h6 {
-   font-family: Roboto; bold;
+   font-family: Roboto, bold,
 }
 body,
 h1,
@@ -48,7 +48,7 @@ h6,
 p,
 ol,
 ul {
-   margin:0%
+   margin:0%;
    padding: 0;
 }
 ol,
@@ -121,6 +121,12 @@ header button {
    padding: 56px 16px;
    border-radius: 10px;
    margin: 5px 10px;
+   display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
  }
  
  .hero h1 {
@@ -130,7 +136,8 @@ header button {
  }
  
  .hero .hero-accent {
-   color: var(--light-grey);
+   color: var(--light-grey)
+
  }
   article {
       padding: 32px 16px;
@@ -139,7 +146,15 @@ header button {
       margin: 5px 10px;
       transition: all 0.3s ease;
     }
-    
+    .Biography {
+      display: flex;
+    }
+    .Biography img {
+      width: auto;
+      height: 40vh;
+      padding: 20px;
+    }
+
     article:hover {
       filter: contrast(80%);
     }
@@ -156,9 +171,21 @@ header button {
       margin-bottom: 16px;
       color: var(--black);
     }
+    .Trending a {
+      margin-bottom: 16px;
+      color: var(--black);
+      text-decoration: none;
+    }
     
     article p {
       margin-bottom: 16px;
+    }
+    .project-tiles {
+      display: flex;
+    }
+    .Project {
+      background-color: #000000;
+      color: var(--hot-pink);
     }
 
      /* .contact-form */
