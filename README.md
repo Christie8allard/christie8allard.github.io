@@ -1,6 +1,14 @@
 #  your_name_here - Portfolio Task
 ​
 [My portfolio site](link_to_your_site)
+
+
+.hero h1 {
+   font-size: 2rem;
+   margin-bottom: 24px;
+   color: var(--hot-pink);
+ }
+
 ​
 ## Project Requirements
 
