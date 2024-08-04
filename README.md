@@ -41,4 +41,8 @@ The colour changes in each section from a lighter grey to a darker one when you 
 > You can do this by saving the images in a folder in your repo, and including them in your readme document with the following Markdown code: 
 
 ####  image_title_goes_here 
-![Put a description of your image here](./relative_path_to_file)
+
+Website full screen
+[full screen] src="./Images/Website-screen-shots/website-full-screen.jpg"
+[half screen] src="./Images/Website-screen-shots/website-half-screen.jpg"
+[narrow screen] src="./Images/Website-screen-shots/website-narrow.jpg"
