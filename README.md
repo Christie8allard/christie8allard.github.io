@@ -1,6 +1,6 @@
 #  Christie Ballard - Portfolio Task
 ​
-[My portfolio site](https://github.com/christie8allard.github.io)
+[My portfolio site](https://christie8allard.github.io/)
 
 
 ​
