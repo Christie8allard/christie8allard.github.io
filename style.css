@@ -1,371 +1,44 @@
-/* .icon {
-   // Add styles if needed
-} */
-
-footer a {
-   text-decoration: none;
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    overflow: hidden; /* Prevent scrollbars */
 }
 
-/* Base HTML Styles */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-:root {
-   --hot-pink: #ff71b1;
-   --pink: #f69aac;
-   --grey: #6d6e79;
-   --blue: #07599c;
-   --light-grey: #e3e3eb;
-   --black: #000000;
-   --white: #ffffff;
+.container {
+    position: relative;
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* CSS Reset */
-html {
-   box-sizing: border-box;
-   font-size: 18px;
-   font-family: "Roboto";
-   color: var(--black);
-   scroll-behavior: smooth;
+.portfolio-image {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    object-fit: cover; /* This will cover the entire space, might crop image */
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-*,
-*:before,
-*::after {
-   box-sizing: inherit;
+area {
+    cursor: pointer;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-   font-family: Roboto, sans-serif; /* Corrected font-family */
+area:hover + .highlight {
+    background: rgba(255, 255, 255, 0.2);
+    position: absolute;
 }
 
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ol,
-ul {
-   margin: 0;
-   padding: 0;
-}
-
-ol,
-ul {
-   list-style: circle;
-}
-
-img {
-   max-width: 100%;
-   height: auto;
-}
-
-input,
-button,
-textarea,
-select {
-   font-family: Roboto; /* Corrected font property */
-}
-
-/* Utilities */
-.display-none {
-   display: none;
-}
-
-/* Components */
-
-/* btn-primary */
-.btn-primary {
-   padding: 12px 16px;
-   display: inline-block;
-   text-decoration: dotted;
-   color: var(--grey);
-   border-radius: 4px;
-   background-color: var(--blue);
-   transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.2); /* Fixed syntax error */
-   transform: translateY(-4px);
-}
-
-/* header */
-header .mobile-header {
-   padding: 16px;
-}
-
-header button {
-   all: unset;
-}
-
-/* .logo */
-.logo {
-   height: 50px;
-}
-
-/* .mobile-nav */
-.mobile-nav a {
-   text-decoration: none;
-   color: var(--hot-pink);
-   display: block;
-   padding: 4px 16px;
-}
-
-/* Hide the default checkbox */
-.hamburger-toggle {
-   display: none;
-}
-
-/* Style the hamburger icon */
-.hamburger-icon {
-   display: none; 
-   cursor: pointer;
-}
-
-/* Desktop Navigation Styles */
-.desktop-nav {
-   display: flex; 
-   justify-content: space-around; 
-   align-items: center; 
-   padding: 0; 
-   margin: 0; 
-}
-
-.desktop-nav ul {
-   display: flex; 
-   padding: 0;
-   margin: 0;
-   list-style: none; 
-}
-
-.desktop-nav li {
-   margin: 0 10px; 
-}
-
-.desktop-nav a {
-   text-decoration: none;
-   color: var(--black);
-   font-size: 1rem; 
-   padding: 10px 15px; 
-}
-
-/* Mobile Navigation Styles */
-.mobile-nav {
-   display: none; 
-   position: absolute;
-   top: 60px; 
-   left: 0;
-   right: 0;
-   background-color: var(--white); 
-   padding: 16px;
-   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
-}
-
-.mobile-nav a {
-   display: block; 
-   padding: 12px 16px; 
-   color: var(--hot-pink); 
-}
-
-/* Toggle the mobile menu visibility when the checkbox is checked */
-.hamburger-toggle:checked + .mobile-nav {
-   display: block;
-}
-
-/* Show the hamburger icon and hide desktop nav on mobile */
-@media (max-width: 767px) {
-   .desktop-nav {
-      display: none; 
-   }
-
-   .hamburger-icon {
-      display: block; 
-   }
-}
-
-/* Add styles for article section */
-article {
-   padding: 32px 16px;
-   background-color: var(--light-grey);
-   border-radius: 10px;
-   margin: 5px 10px;
-   transition: all 0.3s ease;
-}
-
-article h2 {
-   margin-bottom: 16px;
-   color: var(--black);
-}
-
-article p {
-   margin-bottom: 16px;
-}
-
-@media (min-width: 768px) {
-   .desktop-nav a {
-      text-decoration: none;
-      font-size: larger;
-      color: #000000;
-   }
-
-   .desktop-nav {
-      display: inline-flex;
-   }
-
-   .hero {
-      padding: 120px 56px;
-   }
-
-   .hero h1 {
-      font-size: 3.5rem;
-      max-width: 70%;
-   }
-
-   .contact-form {
-      max-width: 60%;
-      margin: 40px auto;
-   }
-
-   .contact-form h2 {
-      text-align: center;
-      font-size: 2.5rem;
-   }
-
-   footer {
-      justify-content: center;
-   }
-
-   footer .socials-icon {
-      margin-left: 20px;
-      margin-right: 20px;
-   }
-}
-
-/* .hero */
-.hero {
-   background-color: var(--white);
-   padding: 56px 16px;
-   border-radius: 10px;
-   margin: 5px 10px;
-   display: flex;
-   flex-direction: column;
-   align-content: center;
-   justify-content: center;
-   align-items: center;
-}
-
-.hero h1 {
-   font-size: 2rem;
-   margin-bottom: 24px;
-   color: var(--hot-pink);
-}
-
-.hero .hero-accent {
-   color: var(--light-grey);
-}
-
-/* .hamburger-icon  */
-.hamburger-icon {
-   height: 50px;
-}
-
-/* Biography Section */
-.Biography {
-   display: flex;
-}
-
-.Biography img {
-   width: auto;
-   height: 40vh;
-   padding: 20px;
-}
-
-article:hover {
-   filter: contrast(80%);
-}
-
-article .icon {
-   height: 24px;
-   width: 24px;
-   margin-left: 10px;
-   margin-right: 10px;
-}
-
-article .article-heading h2 {
-   margin-bottom: 16px;
-   color: var(--black);
-}
-
-.Trending a {
-   margin-bottom: 16px;
-   color: var(--black);
-   text-decoration: none;
-}
-
-.project-tiles {
-   display: flex;
-}
-
-.Project {
-   background-color: #000000;
-   color: var(--hot-pink);
-}
-
-/* .contact-form */
-.contact-form {
-   padding: 48px 16px;
-   border-radius: 10px;
-   margin: 5px 10px;
-}
-
-.contact-form input,
-.contact-form select {
-   display: block;
-   width: 100%;
-   padding: 8px;
-   margin-bottom: 16px;
-}
-
-.contact-form textarea {
-   display: block;
-   width: 100%;
-   padding: 8px;
-}
-
-.contact-form label {
-   display: block;
-   width: 100%;
-}
-
-.contact-form h2 {
-   color: var(--hot-pink);
-   margin-bottom: 16px;
-}
-
-.contact-form input[type="submit"] {
-   background-color: var(--hot-pink);
-   border: 0;
-   margin-top: 8px;
-   cursor: pointer;
-}
-
-/* footer */
-footer {
-   padding: 16px;
-   text-align: center;
-   display: flex;
-   justify-content: space-evenly;
-}
-
-.socials-icon {
-   width: 40px;
-   height: 40px;
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .portfolio-image {
+        object-fit: cover; /* Maintain fullscreen on mobile */
+        width: 100vw;
+        height: 100vh;
+    }
 }
