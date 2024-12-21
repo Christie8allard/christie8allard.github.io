@@ -11,32 +11,42 @@
     <div class="container">
         <img src="/Images/brickbackground.jpg" alt="Portfolio Image" class="portfolio-image" usemap="#portfolio-map">
 
+        <!-- image map with coordiantes -->
         <map name="portfolio-map">
+            <!-- about me -->
             <area shape="rect"
-                coords="100,100,300,400"
+                coords="300,100,600,800"
                 href="about.html"
                 alt="About me"
                 title="About me"> 
             
-            <area shape="poly"
-                coords="301,100,500,100,500,400,301,400"
+                <!-- trending brick -->
+            <area shape="rect"
+                coords="600,0,1000,300"
                 href="trending.html"
                 alt="Trending Projects"
                 title="Trending Projects"
-
+                
+                <!-- other work -->
             <area shape="rect" 
-                coords="501,100,700,250" 
+                coords="600,300,1000,600" 
                 href="other-work.html" 
                 alt="Other Work"
                 title="Other Work">
         
+                <!-- contact -->
             <area shape="rect" 
                 coords="501,251,700,400" 
                 href="contact.html" 
                 alt="Contact"
                 title="Contact">
-
         </map>
+
+        <!-- hover effect overlays -->
+        <div class="hover-area hover-area-person"></div>
+            <div class="hover-area hover-area-brick1"></div>
+            <div class="hover-area hover-area-brick2"></div>
+            <div class="hover-area hover-area-stairs"></div>
     </div>
 </body>
 
