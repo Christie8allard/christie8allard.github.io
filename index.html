@@ -25,21 +25,22 @@
 
         .click-area {
             position: absolute;
-            background: rgba(255, 20, 147, 0.3);
-            border: 4px solid deeppink;
-            color: white;
-            font-weight: bold;
+            background: transparent; /* Invisible by default */
+            border: none; /* No border by default */
+            color: transparent; /* Text invisible by default */
             padding: 10px;
             text-decoration: none;
             z-index: 10;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease; /* Smooth transition for hover effect */
         }
 
         .click-area:hover {
-            background: rgba(255, 20, 147, 0.5);
+            background: rgba(255, 20, 147, 0.3); /* Pink background on hover */
+            border: 4px solid deeppink; /* Border appears on hover */
+            color: white; /* Text becomes visible on hover */
         }
 
-        /* Exact coordinates from your positioning */
+        /* Exact coordinates remain the same */
         #about-area {
             left: 497px;
             top: 1px;
@@ -73,7 +74,7 @@
     <div class="container">
         <img src="/images/updated_brickbackground.jpg" alt="Portfolio Image" class="portfolio-image">
         
-        <!-- Fixed position areas with links -->
+        <!-- Invisible areas that appear on hover -->
         <a href="about.html" class="click-area" id="about-area">About</a>
         <a href="trending.html" class="click-area" id="trending-area">Trending</a>
         <a href="other-work.html" class="click-area" id="other-work-area">Other Work</a>
