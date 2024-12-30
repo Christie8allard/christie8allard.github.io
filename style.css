@@ -2,81 +2,127 @@ body {
     margin: 0;
     padding: 0;
     background-color: #1a1a1a;
-    overflow: hidden; 
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .container {
-    position: relative;
-    width: 100vw; 
-    height: 100vh; 
+    position: fixed; /* Changed to fixed for better fullscreen behavior */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    overflow: hidden;
 }
 
 .portfolio-image {
-    width: 100vw; 
-    height: 100vh; 
-    object-fit: cover; 
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center; /* Ensures image stays centered */
     position: absolute;
     top: 0;
     left: 0;
 }
 
-/* Hover effect container */
+/* Interactive areas styling */
 .hover-overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     pointer-events: none;
+    z-index: 1;
 }
 
-/* individual hover areas */
 .hover-area {
     position: absolute;
     border: 2px solid transparent;
-    transition: all o.3s ease;
+    transition: all 0.3s ease;
     pointer-events: none;
 }
 
-/* hover effects for image map areas */
+/* Hover effects with improved visibility */
 area:hover ~ .hover-overlay .hover-area-person {
-    border: 2px solid #ff69b4;
-    background: rgba(255, 105, 180, 0.2);
+    border: 3px solid #ff69b4;
+    background: rgba(255, 105, 180, 0.25);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
     animation: pulse 1.5s infinite;
 }
 
-area:hover ~ .hover-overlay .hover-area-brick1 {
-    border: 2px solid #ff69b4;
-    background: rgba(255, 105, 180, 0.2);
-}
-
-area:hover ~ .hover-overlay .hover-area-brick2 {
-    border: 2px solid #ff69b4;
-    background: rgba(255, 105, 180, 0.2);
-}
-
+area:hover ~ .hover-overlay .hover-area-brick1,
+area:hover ~ .hover-overlay .hover-area-brick2,
 area:hover ~ .hover-overlay .hover-area-stairs {
-    border: 2px solid #ff69b4;
-    background: rgba(255, 105, 180, 0.2);
+    border: 3px solid #ff69b4;
+    background: rgba(255, 105, 180, 0.25);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(255, 105, 180, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(255, 105, 180, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(255, 105, 180, 0); }
+    0% { 
+        box-shadow: 0 0 0 0 rgba(255, 105, 180, 0.6);
+    }
+    70% { 
+        box-shadow: 0 0 0 15px rgba(255, 105, 180, 0);
+    }
+    100% { 
+        box-shadow: 0 0 0 0 rgba(255, 105, 180, 0);
+    }
 }
 
-
-/* Mobile responsiveness */
+/* Enhanced mobile responsiveness */
 @media (max-width: 768px) {
     .portfolio-image {
-        object-fit: cover;
-        width: 100vw;
         height: 100vh;
+        width: auto; /* Allow width to adjust while maintaining aspect ratio */
+        min-width: 100vw;
     }
+}
+/* debugging */
+/* Base styles remain the same until the debug section */
+
+/* Debugging styles - add at the bottom of your CSS */
+.debug-area {
+    position: absolute;
+    background: rgba(255, 20, 147, 0.3); /* Brighter pink */
+    border: 4px solid deeppink;
+    pointer-events: none;
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+#debug-about {
+    left: 25%;
+    top: 10%;
+    width: 30%;
+    height: 80%;
+}
+
+#debug-trending {
+    right: 0;
+    top: 0;
+    width: 35%;
+    height: 40%;
+}
+
+#debug-other {
+    right: 0;
+    top: 40%;
+    width: 35%;
+    height: 40%;
+}
+
+#debug-contact {
+    left: 10%;
+    bottom: 0;
+    width: 20%;
+    height: 30%;
+}
+
+.debug-area {
+    color: white; /* Add this line */
+    font-weight: bold; /* Add this line */
 }

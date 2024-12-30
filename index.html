@@ -2,52 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width", initial-sale="1.0">
-    <title>Welcome to my portfolio babe</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+        }
 
+        .container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .portfolio-image {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        .click-area {
+            position: absolute;
+            background: rgba(255, 20, 147, 0.3);
+            border: 4px solid deeppink;
+            color: white;
+            font-weight: bold;
+            padding: 10px;
+            text-decoration: none;
+            z-index: 10;
+            transition: background-color 0.3s ease;
+        }
+
+        .click-area:hover {
+            background: rgba(255, 20, 147, 0.5);
+        }
+
+        /* Exact coordinates from your positioning */
+        #about-area {
+            left: 497px;
+            top: 1px;
+            width: 331.317px;
+            height: 630.117px;
+        }
+
+        #trending-area {
+            left: 894px;
+            top: 58px;
+            width: 573.2px;
+            height: 495.65px;
+        }
+
+        #other-work-area {
+            left: 1625px;
+            top: 115px;
+            width: 343.2px;
+            height: 571.65px;
+        }
+
+        #contact-area {
+            left: 684px;
+            top: 701px;
+            width: 223.6px;
+            height: 195.367px;
+        }
+    </style>
+</head>
 <body>
     <div class="container">
-        <img src="/Images/brickbackground.jpg" alt="Portfolio Image" class="portfolio-image" usemap="#portfolio-map">
-
-        <!-- image map with coordiantes -->
-        <map name="portfolio-map">
-            <!-- about me -->
-            <area shape="rect"
-                coords="300,100,600,800"
-                href="about.html"
-                alt="About me"
-                title="About me"> 
-            
-                <!-- trending brick -->
-            <area shape="rect"
-                coords="600,0,1000,300"
-                href="trending.html"
-                alt="Trending Projects"
-                title="Trending Projects"
-                
-                <!-- other work -->
-            <area shape="rect" 
-                coords="600,300,1000,600" 
-                href="other-work.html" 
-                alt="Other Work"
-                title="Other Work">
+        <img src="/images/updated_brickbackground.jpg" alt="Portfolio Image" class="portfolio-image">
         
-                <!-- contact -->
-            <area shape="rect" 
-                coords="501,251,700,400" 
-                href="contact.html" 
-                alt="Contact"
-                title="Contact">
-        </map>
-
-        <!-- hover effect overlays -->
-        <div class="hover-area hover-area-person"></div>
-            <div class="hover-area hover-area-brick1"></div>
-            <div class="hover-area hover-area-brick2"></div>
-            <div class="hover-area hover-area-stairs"></div>
+        <!-- Fixed position areas with links -->
+        <a href="about.html" class="click-area" id="about-area">About</a>
+        <a href="trending.html" class="click-area" id="trending-area">Trending</a>
+        <a href="other-work.html" class="click-area" id="other-work-area">Other Work</a>
+        <a href="contact.html" class="click-area" id="contact-area">Contact</a>
     </div>
 </body>
-
 </html>
