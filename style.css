@@ -157,3 +157,104 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 .submit-button:hover {
     background-color: #ff1493;
 }
+
+/* trending page tiles */
+/* Project Cards Layout */
+.cards-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    margin-bottom: 30px;
+}
+
+.project-card .wrapper {
+    background-color: #2a2a2a;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+}
+
+.project-card .date {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: deeppink;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 0 0 25px 0;
+}
+
+.project-card .date span {
+    display: block;
+    text-align: center;
+}
+
+.project-card .date .day {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.project-card .date .month,
+.project-card .date .year {
+    font-size: 12px;
+}
+
+.project-card .data {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(70px);
+    transition: transform 0.3s ease;
+}
+
+.project-card .wrapper:hover .data {
+    transform: translateY(0);
+}
+
+.project-card .content {
+    padding: 1.5em;
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+}
+
+.project-card .type {
+    font-size: 12px;
+    color: deeppink;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-card .title {
+    margin: 10px 0;
+}
+
+.project-card .title a {
+    color: white;
+    text-decoration: none;
+}
+
+.project-card .title a:hover {
+    color: deeppink;
+}
+
+.project-card .text {
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .project-card .wrapper {
+        height: 300px;
+    }
+}
