@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thank You</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body class="content-page">
     <div class="content-container">
@@ -14,47 +15,37 @@
             <h1 class="page-title">Thank you.</h1>
             <div class="thank-you-message">
                 <p>Yeehaw message sent. Assuming I've coded this correctly I'll get back to you shortly. </p>
-                <a href="index.html" class="return-home">Return to Homepage</a>
+                <p>Click anywhere for more confetti.</p>
             </div>
         </div>
     </div>
+
     <script>
-        // fire confetti
-        window.onload = function () {
-            // first burst
-            confetti ({
-                particleCount: 100,
+        function celebration() {
+            confetti({
+                particleCount: 150,
                 spread: 70,
-                origin: { y: 0.6 }
+                origin: { y: 0.6 },
+                colors: ['#ff1493', '#ff69b4', '#ffffff']
             });
+        }
 
-            // second burst
-            setTimeout(function() {
-                confetti({
-                    particleCount: 50,
-                    angle: 60,
-                    spread: 55,
-                    origin: { x: 0 }
-                });
-                confetti({
-                    particleCount: 50,
-                    angle: 120,
-                    spread: 55,
-                    origin: { x: 1 }
-                });
-            }, 150);
+        // Trigger on page load
+        window.onload = celebration;
 
-            // Final burst
-            setTimeout(function() {
-                confetti({
-                    particleCount: 150,
-                    spread: 100,
-                    origin: { y: 0.7 }
-                });
-            }, 500);
-        };
+        // Click anywhere for more
+        document.addEventListener('click', function() {
+            celebration();
+        });
     </script>
 
-
+    <style>
+        .confetti-text {
+            font-size: 0.9em;
+            color: #ff69b4;
+            margin: 15px 0;
+            font-style: italic;
+        }
+    </style>
 </body>
 </html>
