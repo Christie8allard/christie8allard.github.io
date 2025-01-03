@@ -297,3 +297,24 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 .fa-instagram:hover {
     color: #e4405f;
 }
+
+/* thank you page styles */
+.thank-you-message {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.return-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: deeppink;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.return-home:hover {
+    background-color: #ff1493;
+}
