@@ -320,6 +320,7 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 }
 
 /* other work page */
+/* Other Work Page Styles */
 .work-showcase {
     max-width: 900px;
     margin: 0 auto;
@@ -357,40 +358,6 @@ area:hover ~ .hover-overlay .hover-area-stairs {
     width: 100%;
     height: 100%;
     border: none;
-}
-
-/* Animation for content */
-.work-description, .video-container {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-.video-container {
-    animation-delay: 0.2s;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .work-showcase {
-        padding: 10px;
-    }
-    
-    .work-description {
-        padding: 15px;
-        margin-bottom: 30px;
-    }
 }
 
 /* Portfolio Sections */
@@ -458,6 +425,24 @@ area:hover ~ .hover-overlay .hover-area-stairs {
     display: block;
     font-size: 0.9em;
     color: #ddd;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.work-description, .video-container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
 }
 
 /* Responsive adjustments */
