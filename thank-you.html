@@ -8,7 +8,7 @@
 </head>
 <body class="content-page">
     <div class="content-container">
-        <a href="index.html" class="back-button">← Back to Home</a>
+        <a href="index.html" class="back-button">← Back</a>
 
         <div class="content">
             <h1 class="page-title">Thank you.</h1>
@@ -18,5 +18,43 @@
             </div>
         </div>
     </div>
+    <script>
+        // fire confetti
+        window.onload = function () {
+            // first burst
+            confetti ({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+
+            // second burst
+            setTimeout(function() {
+                confetti({
+                    particleCount: 50,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+                confetti({
+                    particleCount: 50,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+            }, 150);
+
+            // Final burst
+            setTimeout(function() {
+                confetti({
+                    particleCount: 150,
+                    spread: 100,
+                    origin: { y: 0.7 }
+                });
+            }, 500);
+        };
+    </script>
+
+
 </body>
 </html>
