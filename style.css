@@ -258,3 +258,42 @@ area:hover ~ .hover-overlay .hover-area-stairs {
         height: 300px;
     }
 }
+
+/* contact page social footers */
+.social-footer {
+    margin-top: 50px;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 105, 180, 0.2);
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.social-icon {
+    color: white;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.social-icon:hover {
+    color: deeppink;
+    transition: translateY(-3px);
+}
+
+/* Specific hover colors for each platform */
+.fa-linkedin:hover {
+    color: #0077b5;
+}
+
+.fa-github:hover {
+    color: #6e5494;
+}
+
+.fa-instagram:hover {
+    color: #e4405f;
+}
