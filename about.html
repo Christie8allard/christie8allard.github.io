@@ -5,16 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About me</title>
     <link rel="stylesheet" href="./style.css">
-    <!-- Temporary inline style to debug -->
-    <style>
-        /* These styles will help us verify if any CSS is loading */
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #1a1a1a;
-            color: #ffffff;
-        }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 </head>
 <body class="content-page">
     <div class="content-container">
@@ -22,8 +16,86 @@
 
         <div class="content">
             <h1 class="page-title">About me.</h1>
-            <p>This is my about section</p>
+            <p>I've not going to lie to you, at the end of the day, when alls said and done, I never know what to write for an About page. </p>
+            <p>So I've done a word cloud instead.</p>
+            
+            <div id="root"></div> 
         </div>
     </div>
+
+    <script type="text/babel">
+        const WordCloud = () => {
+            const [words, setWords] = React.useState([
+                { text: 'Digital Marketing', size: 'text-3xl' },
+                { text: 'Paid Social', size: 'text-2xl' },
+                { text: 'Organic Social', size: 'text-lg' },
+                { text: 'She Codes', size: 'text-3xl' },
+                { text: 'HTML', size: 'text-xl' },
+                { text: 'CSS', size: 'text-xl' },
+                { text: 'Python', size: 'text-lg' },
+                { text: 'tea', size: 'text-3xl' },
+                { text: 'leadership', size: 'text-2xl' },
+                { text: 'Chappell Roan', size: 'text-2xl' },
+                { text: 'BORT', size: 'text-2xl' },
+                { text: 'Project Management', size: 'text-3xl' },
+                { text: 'dogs', size: 'text-lg' },
+                { text: 'iced long black', size: 'text-2xl' }
+            ]);
+            
+            const [newWord, setNewWord] = React.useState('');
+
+            const addWord = (e) => {
+                e.preventDefault();
+                if (newWord.trim()) {
+                    const sizes = ['text-lg', 'text-xl', 'text-2xl', 'text-3xl'];
+                    setWords([...words, { 
+                        text: newWord.trim(), 
+                        size: sizes[Math.floor(Math.random() * sizes.length)]
+                    }]);
+                    setNewWord('');
+                }
+            };
+
+            return (
+                <div className="mt-8">
+                    <div className="flex items-center">
+                        <input
+                            type="text"
+                            value={newWord}
+                            onChange={(e) => setNewWord(e.target.value)}
+                            className="flex-1 p-2 rounded bg-gray-800 text-white border border-pink-500"
+                            placeholder="Add a word"
+                        />
+                        <button 
+                            onClick={addWord}
+                            style={{ backgroundColor: 'deeppink' }}
+                            className="ml-2 px-4 py-2 text-white rounded hover:opacity-90"
+                        >
+                            Add
+                        </button>
+                    </div>
+
+                    <div className="p-6 rounded-lg mt-4" style={{ backgroundColor: '#2a2a2a' }}>
+                        <div className="flex flex-wrap gap-4 items-center">
+                            {words.map((word, index) => (
+                                <span
+                                    key={index}
+                                    className={`${word.size} transition-all duration-300`}
+                                    style={{ 
+                                        color: 'deeppink',
+                                        cursor: 'default'
+                                    }}
+                                >
+                                    {word.text}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+
+        ReactDOM.createRoot(document.getElementById('root')).render(<WordCloud />);
+    </script>
 </body>
 </html>
