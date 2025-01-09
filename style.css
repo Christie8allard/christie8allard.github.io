@@ -49,7 +49,7 @@ body {
 
 /* Hover effects with improved visibility */
 area:hover ~ .hover-overlay .hover-area-person {
-    border: 3px solid #ff69b4;
+    border: 3px solid #f69aac;
     background: rgba(255, 105, 180, 0.25);
     box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
     animation: pulse 1.5s infinite;
@@ -58,7 +58,7 @@ area:hover ~ .hover-overlay .hover-area-person {
 area:hover ~ .hover-overlay .hover-area-brick1,
 area:hover ~ .hover-overlay .hover-area-brick2,
 area:hover ~ .hover-overlay .hover-area-stairs {
-    border: 3px solid #ff69b4;
+    border: 1px solid #f69aac;
     background: rgba(255, 105, 180, 0.25);
     box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
 }
@@ -104,8 +104,8 @@ area:hover ~ .hover-overlay .hover-area-stairs {
     position: fixed;
     top: 20px;
     left: 20px;
-    background-color: deeppink;
-    color: white;
+    background-color: #FF71B1;
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -114,11 +114,11 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 }
 
 .back-button:hover {
-    background-color: #ff1493;
+    background-color: #f69aac;
 }
 
 .page-title {
-    color: deeppink;
+    color: #FF71B1;
     font-size: 2.5em;
     margin-top: 60px;
     margin-bottom: 30px;
@@ -133,8 +133,8 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    background: #2a2a2a;
-    border: 1px solid #444;
+    background: #6d6e79;
+    border: 1px solid #000000;
     border-radius: 4px;
     color: white;
 }
@@ -145,8 +145,8 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 }
 
 .submit-button {
-    background-color: deeppink;
-    color: white;
+    background-color: #FF71B1;
+    color: black;
     padding: 12px 25px;
     border: none;
     border-radius: 5px;
@@ -155,7 +155,7 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 }
 
 .submit-button:hover {
-    background-color: #ff1493;
+    background-color: #f69aac;
 }
 
 /* trending page tiles */
@@ -174,7 +174,7 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 }
 
 .project-card .wrapper {
-    background-color: #2a2a2a;
+    background-color: #6d6e79;
     height: 400px;
     position: relative;
     overflow: hidden;
@@ -188,8 +188,8 @@ area:hover ~ .hover-overlay .hover-area-stairs {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: deeppink;
-    color: white;
+    background-color: #FF71B1;
+    color: black;
     padding: 10px 15px;
     border-radius: 0 0 25px 0;
 }
@@ -229,7 +229,7 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 
 .project-card .type {
     font-size: 12px;
-    color: deeppink;
+    color: #FF71B1;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -244,7 +244,7 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 }
 
 .project-card .title a:hover {
-    color: deeppink;
+    color: #f69aac;
 }
 
 .project-card .text {
@@ -281,7 +281,7 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 }
 
 .social-icon:hover {
-    color: deeppink;
+    color: #FF71B1;
     transition: translateY(-3px);
 }
 
@@ -308,7 +308,7 @@ area:hover ~ .hover-overlay .hover-area-stairs {
     display: inline-block;
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: deeppink;
+    background-color: #FF71B1;
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -316,7 +316,7 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 }
 
 .return-home:hover {
-    background-color: #ff1493;
+    background-color: #f69aac;
 }
 
 /* other work page */
@@ -331,13 +331,13 @@ area:hover ~ .hover-overlay .hover-area-stairs {
     margin-bottom: 40px;
     padding: 20px;
     background: rgba(255, 20, 147, 0.1);
-    border-left: 4px solid deeppink;
+    border-left: 4px solid #FF71B1;
     border-radius: 0 8px 8px 0;
 }
 
 .lead-text {
     font-size: 1.4em;
-    color: deeppink;
+    color: #FF71B1;
     margin-bottom: 20px;
 }
 
@@ -374,7 +374,7 @@ area:hover ~ .hover-overlay .hover-area-stairs {
 }
 
 .section-title {
-    color: deeppink;
+    color: #FF71B1;
     font-size: 1.8em;
     margin-bottom: 20px;
     padding-bottom: 10px;
@@ -417,7 +417,7 @@ area:hover ~ .hover-overlay .hover-area-stairs {
     display: block;
     font-size: 1.2em;
     font-weight: bold;
-    color: deeppink;
+    color: #FF71B1;
     margin-bottom: 5px;
 }
 
